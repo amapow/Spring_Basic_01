@@ -17,8 +17,21 @@ dependencies {
 	testImplementation ('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junitt-vintage-engine'
 	}
+
+	//Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+//Lombok
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
 }

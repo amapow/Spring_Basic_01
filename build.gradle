@@ -17,6 +17,8 @@ dependencies {
 	testImplementation ('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junitt-vintage-engine'
 	}
+	implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	//Lombok
 	compileOnly 'org.projectlombok:lombok'
